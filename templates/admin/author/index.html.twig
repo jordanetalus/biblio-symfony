@@ -14,7 +14,9 @@
                 <div class="card mb-1">
                     <div class="card-body">
                         <div class="card-title d-flex justify-content-between">
+                        <a href="{{path('app_admin_author_show', {id: author.id})}}">
                             <h4 class="mb-1">{{ author.name }}</h4>
+                        </a>
                             <small class="text-muted">Identifiant : {{ author.id }}</small>
                         </div>
                     </div>
