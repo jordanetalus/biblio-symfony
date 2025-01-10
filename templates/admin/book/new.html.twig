@@ -7,7 +7,13 @@
     <div class="w-50 m-auto">
         <h1>Ajout de livre</h1>
 
-        {{ form_start(form) }}
+        {{ form_start(form, {
+            'attr':{
+                'hx-post': path('app_admin_author_new'),
+                'hx-target': '#response-container',      
+                'hx-swap': 'outerHTML',  
+            }
+        }) }}
         {{ form_row(form.title, {label: 'Titre'}) }}
         {{ form_row(form.isbn, {label: 'Numéro ISBN'}) }}
         {{ form_row(form.cover, {label: 'Couverture (lien URL)'}) }}
